@@ -4,6 +4,11 @@
     font-weight: bold;
 }
 
+:root {
+    --green-color: #596d48;
+    --gray-color: #f9fafb;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -66,6 +71,12 @@ main {
     flex: 6;
     display: flex;
     flex-direction: column;
+    background-color: var(--gray-color);
+}
+
+main > * {
+    padding-left: 50px;
+    background-color: var(--gray-color);
 }
 
 main .italic {
@@ -77,12 +88,82 @@ main h2 {
     font-weight: 510;
 }
 
-form p label {
+main h2:first-child {
+    margin-top: clamp(4vh, 8vh, 20vh);
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    
+
+    background-color: white;
+    height: 370px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+main form ul.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    row-gap: 20px;
+    height: 200px;
+    padding-left: 50px;
+    width: 80%;
+    /* box-shadow: 5px 5px 2px #dadbdc; */
+}
+
+form ul.inputs li {
+    list-style-type: none;
+}
+
+form ul.inputs li input {
+    border: solid #e5e7eb 1px;
+    height: 33px;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+form ul.inputs li label {
     text-transform: uppercase;
     font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 form h3,
-form p label {
+ul.inputs li label {
     opacity: 0.85;
+}
+
+form h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-left: 50px;
+    margin: 15px 0 5px 0;
+}
+
+form p.sign-up {
+    background-color: var(--gray-color);
+    padding: 30px 0 0 50px;
+}
+
+form p.sign-up button {
+    background-color: var(--green-color);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    padding: 15px 40px;
+    /* box-shadow: 3px 3px 5px #dfe0e0; */
+}
+
+main p a:link,
+main p a:visited {
+    color: var(--green-color);
+    text-decoration: none;
+    font-weight: bold;
 }
