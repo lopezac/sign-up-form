@@ -21,7 +21,7 @@ body {
     background-position: center;
     color: white;
     
-    flex: 1;
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,7 +50,7 @@ body {
 }
 
 .left-cont footer {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .left-cont a:link,
@@ -63,5 +63,26 @@ body {
 }
 
 main {
-    flex: 3;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+
+main .italic {
+    font-style: italic;
+}
+
+main h2 {
+    font-size: 1.2rem;
+    font-weight: 510;
+}
+
+form p label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+form h3,
+form p label {
+    opacity: 0.85;
 }
